@@ -1,18 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C27B0"
-    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/couple" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="Fragment1"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        android:text="철수"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"
+        android:src="@drawable/ic_baseline_favorite_24"></ImageView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="짱구"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/d_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="1일"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/ch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="6"
+        android:background="@menu/background"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ch" />
+
+    <ImageView
+        android:id="@+id/jang"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="6"
+        android:background="@menu/background"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jjang" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
