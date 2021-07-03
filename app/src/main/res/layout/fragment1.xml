@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
@@ -55,29 +61,74 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="160dp">
 
     <ImageView
         android:id="@+id/ch"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="6"
-        android:background="@menu/background"
         android:gravity="center"
         android:scaleType="centerCrop"
         android:src="@drawable/ch" />
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="210dp">
     <ImageView
         android:id="@+id/jang"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="6"
-        android:background="@menu/background"
         android:gravity="center"
         android:scaleType="centerCrop"
         android:src="@drawable/jjang" />
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="16dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#D9000000"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="50 기념일"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="55dp"
+            android:textSize="16dp"
+            android:text="2021.07.14(수)"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="D-15"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="250dp"
+            android:textSize="50dp"
+            />
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
