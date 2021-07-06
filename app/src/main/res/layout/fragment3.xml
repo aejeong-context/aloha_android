@@ -2,17 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D17B0"
-    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Fragment3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="다이어리"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
+        android:textSize="40dp"
         android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_user"
+        />
 </LinearLayout>
 

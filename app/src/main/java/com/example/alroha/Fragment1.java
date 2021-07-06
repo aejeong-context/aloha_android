@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,32 +18,24 @@ import androidx.fragment.app.Fragment;
 public class Fragment1  extends Fragment {
 
     ViewGroup viewGroup;
-    private ImageView jjang;
-    private ImageView ch;
+
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable  Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment1,container,false);
 
-        jjang = viewGroup.findViewById(R.id.jang);
-        ch = viewGroup.findViewById(R.id.ch);
+        ImageButton left_setting = viewGroup.findViewById(R.id.left_setting);
+        ImageButton right_list  = viewGroup.findViewById(R.id.right_list);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            ch.setOutlineProvider(new ViewOutlineProvider() {
-                @Override
-                public void getOutline(View view, Outline outline) {
-                    outline.setRoundRect(0,0,view.getWidth(),view.getHeight()+200,40);
-                }
-            });
-            jjang.setOutlineProvider(new ViewOutlineProvider() {
-                @Override
-                public void getOutline(View view, Outline outline) {
-                    outline.setRoundRect(0,0,view.getWidth(),view.getHeight()+200,40);
-                }
-            });
-            jjang.setClipToOutline(true);
-        }
+        left_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("G,,,,,");
+            }
+        });
+
         return viewGroup;
     }
 }
