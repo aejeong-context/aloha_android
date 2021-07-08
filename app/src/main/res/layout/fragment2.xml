@@ -2,17 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C2140"
-    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Fragment2"
+        android:gravity="left"
+        android:text="위시리스트"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
+    <ListView
+        android:id="@+id/wishView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/wish_list"
+        />
 </LinearLayout>
 

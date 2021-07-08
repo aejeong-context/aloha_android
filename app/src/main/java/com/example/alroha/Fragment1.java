@@ -27,7 +27,6 @@ public class Fragment1  extends Fragment {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment1,container,false);
 
         ImageButton left_setting = viewGroup.findViewById(R.id.left_setting);
-        ImageButton right_list  = viewGroup.findViewById(R.id.right_list);
 
         left_setting.setOnClickListener(new View.OnClickListener() {
             @Override

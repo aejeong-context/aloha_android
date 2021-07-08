@@ -46,7 +46,7 @@ public class DiaryList extends BaseAdapter {
             System.out.println("들어옴? ? @2222");
 
             holder = new ViewHolder();
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_user, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.diary_list, viewGroup, false);
             TextView title = (TextView) view.findViewById(R.id.title);
             TextView content = (TextView) view.findViewById(R.id.content);
             holder.content = content;
