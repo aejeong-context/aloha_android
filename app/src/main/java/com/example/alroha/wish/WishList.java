@@ -1,11 +1,14 @@
-package com.example.alroha;
+package com.example.alroha.wish;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import com.example.alroha.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +41,7 @@ public class WishList extends BaseAdapter {
         ViewHolder holder = new ViewHolder();
 
         if(view == null) {
+
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.wish_list, viewGroup, false);
             TextView content = (TextView) view.findViewById(R.id.wishText);
             CheckBox checked = (CheckBox) view.findViewById(R.id.checked);
@@ -49,9 +53,14 @@ public class WishList extends BaseAdapter {
         }
         Wish wish = wishList.get(i);
         holder.content.setText(wish.getContents());
+//        holder.checked.setClickable(false);
+        holder.checked.setFocusable(false);
         holder.checked.setChecked(wish.isChecked());
+
+
         return view;
     }
+
 
     static class ViewHolder{
         TextView content;

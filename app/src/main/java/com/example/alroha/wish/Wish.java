@@ -1,8 +1,8 @@
-package com.example.alroha;
+package com.example.alroha.wish;
 
 public class Wish {
-    String contents;
-    boolean checked;
+    private String contents;
+    private boolean checked;
 
     public Wish(String contents, boolean checked) {
         this.contents = contents;

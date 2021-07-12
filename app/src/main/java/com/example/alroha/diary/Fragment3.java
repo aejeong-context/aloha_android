@@ -1,23 +1,21 @@
-package com.example.alroha;
+package com.example.alroha.diary;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import org.w3c.dom.Text;
+import com.example.alroha.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Fragment3  extends Fragment {
 
@@ -26,6 +24,7 @@ public class Fragment3  extends Fragment {
     ArrayList<Diary> diaryArrayList;
     DiaryList diaryAdapter;
     ListView listView;
+    ImageButton diaryAdd;
 
     @Nullable
     @Override
@@ -45,6 +44,15 @@ public class Fragment3  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getContext(),i+"번째 Item",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        diaryAdd = viewGroup.findViewById(R.id.diary_add);
+
+        diaryAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 

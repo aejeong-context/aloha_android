@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import android.view.MenuItem;
 
+import com.example.alroha.diary.Fragment3;
+import com.example.alroha.wish.Fragment2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

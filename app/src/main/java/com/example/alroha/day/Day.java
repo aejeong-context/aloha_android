@@ -1,11 +1,14 @@
-package com.example.alroha;
+package com.example.alroha.day;
 
-public class Diary {
-    private String title,content;
+import java.time.LocalDateTime;
 
-    public Diary(String title, String content) {
+public class Day {
+    private String title,content,date;
+
+    public Day(String title, String content, String date) {
         this.title = title;
         this.content = content;
+        this.date = date;
     }
 
     public String getTitle() {
@@ -22,5 +25,13 @@ public class Diary {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
