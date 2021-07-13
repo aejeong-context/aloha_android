@@ -12,19 +12,31 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
+import com.example.alroha.MainActivity;
 import com.example.alroha.R;
 
 import java.util.ArrayList;
 
-public class Fragment2  extends ListFragment {
+public class Fragment2  extends Fragment {
 
     ViewGroup viewGroup;
 
     ArrayList<Wish> wishArrayList;
     WishList wishAdapter;
     ListView listView;
+
+    public static Fragment2 newInstance() {
+        return new Fragment2();
+    }
+
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override
@@ -40,27 +52,27 @@ public class Fragment2  extends ListFragment {
         listView = (ListView) viewGroup.findViewById(android.R.id.list);
         listView.setAdapter(wishAdapter);
 
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Toast.makeText(getContext(),i+"번째 소원입니다.",Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(getActivity(), WishDetail.class);
-//                startActivity(intent);
-//            }
-//        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if(i==0){
+                    ((MainActivity)getActivity()).replaceFragment(WishDetail.newInstance());
+                }
+            }
+        });
 
 
 
         return viewGroup;
     }
 
-    @Override
-    public void onListItemClick(@NonNull ListView l, @NonNull  View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-                Toast.makeText(getContext(),id+"번째 소원입니다.",Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent();
-        intent.setClass(getActivity(),WishDetail.class);
-        startActivity(intent);
-    }
+//    @Override
+//    public void onListItemClick(@NonNull ListView l, @NonNull  View v, int position, long id) {
+//        super.onListItemClick(l, v, position, id);
+//                Toast.makeText(getContext(),id+"번째 소원입니다.",Toast.LENGTH_SHORT).show();
+//
+//        Intent intent = new Intent(getActivity().getBaseContext(),WishDetail.class);
+//        getActivity().startActivity(intent);
+//    }
 }

@@ -40,7 +40,6 @@ public class Fragment1  extends Fragment {
 
             @Override
             public void onClick(View view) {
-                System.out.println("gg=================");
                 Intent intent = new Intent(getActivity(), DayDetail.class);
                 startActivity(intent);
             }
