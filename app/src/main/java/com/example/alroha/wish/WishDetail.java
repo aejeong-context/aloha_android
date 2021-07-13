@@ -45,8 +45,6 @@ public class WishDetail extends Fragment implements onBackPressListener {
 
     private void goToBack(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().remove(WishDetail.this).commit();
-        fragmentManager.popBackStack();
-        ((MainActivity)getActivity()).replaceFragment(Fragment2.newInstance());
+        fragmentManager.beginTransaction().replace(R.id.main_layout,Fragment2.newInstance()).commit();
     }
 }
