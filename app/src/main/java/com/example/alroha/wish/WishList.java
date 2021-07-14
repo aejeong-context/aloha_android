@@ -53,7 +53,7 @@ public class WishList extends BaseAdapter {
         }
         Wish wish = wishList.get(i);
         holder.content.setText(wish.getContents());
-//        holder.checked.setClickable(false);
+        holder.checked.setClickable(false);
         holder.checked.setFocusable(false);
         holder.checked.setChecked(wish.isChecked());
 

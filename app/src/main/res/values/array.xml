@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wish_array">
+        <item>위시</item>
+        <item>달성</item>
+    </string-array>
+</resources>
