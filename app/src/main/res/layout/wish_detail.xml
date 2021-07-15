@@ -60,7 +60,18 @@
                 android:textSize="20dp" />
 
         </androidx.cardview.widget.CardView>
+<LinearLayout
+    android:id="@+id/dateViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="370dp"
             android:layout_height="80dp"

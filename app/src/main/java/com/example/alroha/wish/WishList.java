@@ -1,6 +1,7 @@
 package com.example.alroha.wish;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.alroha.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +49,7 @@ public class WishList extends BaseAdapter {
             TextView content = (TextView) view.findViewById(R.id.wishText);
             CheckBox checked = (CheckBox) view.findViewById(R.id.checked);
 
+
             holder.content =content;
             holder.checked =checked;
         }else{
@@ -60,6 +64,7 @@ public class WishList extends BaseAdapter {
 
         return view;
     }
+
 
 
     static class ViewHolder{
