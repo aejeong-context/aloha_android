@@ -24,7 +24,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class Fragment2 extends Fragment {
+public class   Fragment2 extends Fragment {
 
     ViewGroup viewGroup;
 
@@ -46,9 +46,9 @@ public class Fragment2 extends Fragment {
         endWishArrayList = new ArrayList<>();
         wishArrayList = new ArrayList<>();
 
-        apiResponse.add(new Wish("바다에서 맥주마시기", false, ""));
-        apiResponse.add(new Wish("도깨비 드라마 정주행하기", false, ""));
-        apiResponse.add(new Wish("커플 운동화 사기", true, "2021-07-14 (목)"));
+        apiResponse.add(new Wish("바다에서 맥주마시기", false, null));
+        apiResponse.add(new Wish("도깨비 드라마 정주행하기", false, null));
+        apiResponse.add(new Wish("커플 운동화 사기", true, "2021년 07월 05일"));
 
     }
 
@@ -67,19 +67,6 @@ public class Fragment2 extends Fragment {
         listView.setAdapter(wishAdapter);
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                Bundle result = new Bundle();
-                result.putString("contents", wishArrayList.get(i).getContents());
-                result.putBoolean("isChecked", wishArrayList.get(i).isChecked());
-                result.putString("completeDate", wishArrayList.get(i).getCompleteDate());
-                getParentFragmentManager().setFragmentResult("WishList", result);
-
-                ((MainActivity) getActivity()).replaceFragment(WishDetail.newInstance());
-            }
-        });
 
         ImageButton addWish = (ImageButton) viewGroup.findViewById(R.id.wishAdd);
         addWish.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +96,19 @@ public class Fragment2 extends Fragment {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Bundle result = new Bundle();
+                result.putString("contents", wishArrayList.get(i).getContents());
+                result.putBoolean("isChecked", wishArrayList.get(i).isChecked());
+                result.putString("completeDate", wishArrayList.get(i).getCompleteDate());
+                getParentFragmentManager().setFragmentResult("WishList", result);
+
+                ((MainActivity) getActivity()).replaceFragment(WishDetail.newInstance());
+            }
+        });
 
         return viewGroup;
     }

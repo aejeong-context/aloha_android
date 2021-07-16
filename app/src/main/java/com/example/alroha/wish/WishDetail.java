@@ -11,7 +11,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,31 +41,68 @@ public class WishDetail extends Fragment implements onBackPressListener {
     String content;
     String completeDate;
 
-    LinearLayout linearLayout;
-
 
     @Override
-    public void onAttach(@NonNull  Context context) {
+    public void onAttach(@NonNull Context context) {
 
         getParentFragmentManager().setFragmentResultListener("WishList", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull  String requestKey, @NonNull  Bundle result) {
-               content =  result.getString("contents");
-               completeDate = result.getString("completeDate");
-
-
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                content = result.getString("contents");
+                completeDate = result.getString("completeDate");
 
                 TextView contentView = viewGroup.findViewById(R.id.contents);
                 contentView.setText(content);
+
+                if (completeDate != null) {
+                    LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 190);
+                    LinearLayout dateView = (LinearLayout) viewGroup.findViewById(R.id.dateViewLayout);
+                    param.topMargin=20;
+                    dateView.setLayoutParams(param);
+
+                    CardView cardView = (CardView) viewGroup.findViewById(R.id.cardView);
+
+
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+                    params.topMargin = 35;
+                    params.leftMargin = 20;
+                    TextView textView = new TextView(getActivity().getApplicationContext());
+                    textView.setText("달성한 날짜");
+                    textView.setTextSize(19);
+                    textView.setTextColor(Color.BLACK);
+
+                    textView.setLayoutParams(params);
+
+
+                    LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+
+                    TextView textView1 = new TextView(getActivity().getApplicationContext());
+                    textView1.setText(completeDate);
+                    textView1.setTextSize(19);
+                    params2.topMargin = 35;
+                    params2.rightMargin = 20;
+                    textView1.setTextColor(Color.BLACK);
+                    textView1.setGravity(Gravity.RIGHT);
+                    textView1.setLayoutParams(params2);
+
+
+                    cardView.addView(textView);
+                    cardView.addView(textView1);
+                } else {
+                    System.out.println("여긴 어떠신가!");
+                }
             }
         });
+
+
         super.onAttach(context);
     }
 
     @Override
-    public void onCreate(@Nullable  Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }
@@ -72,28 +111,16 @@ public class WishDetail extends Fragment implements onBackPressListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.wish_detail,container,false);
-        LinearLayout dateView = viewGroup.findViewById(R.id.dateViewLayout);
-        if(completeDate != "" ){
-            System.out.println("여기 들어올까나?");
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.wish_detail, container, false);
 
-            TextView textView = new TextView(getActivity().getApplicationContext());
-            textView.setText(completeDate);
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            lp.gravity = Gravity.CENTER;
-            textView.setLayoutParams(lp);
 
-            dateView.addView(textView);
-
+//            LinearLayout dateView = (LinearLayout) viewGroup.findViewById(R.id.dateViewLayout);
 //
-//                   CardView dateView = new CardView(WishDetail.newInstance().getContext());
-//                   dateView.setMinimumWidth(370);
-//                   dateView.setMinimumHeight(80);
-//                   dateView.setCardBackgroundColor(Color.WHITE);
-//
-//                   linearLayout.addView(dateView);
-
-        }
+//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+//            TextView textView = new TextView(getActivity().getApplicationContext());
+//            textView.setText(completeDate);
+//            textView.setLayoutParams(params);
+//            dateView.addView(textView);
 
 
         return viewGroup;
@@ -105,8 +132,8 @@ public class WishDetail extends Fragment implements onBackPressListener {
         goToBack();
     }
 
-    private void goToBack(){
+    private void goToBack() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_layout,Fragment2.newInstance()).commit();
+        fragmentManager.beginTransaction().replace(R.id.main_layout, Fragment2.newInstance()).commit();
     }
 }
