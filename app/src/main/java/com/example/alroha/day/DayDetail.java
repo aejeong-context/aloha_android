@@ -26,7 +26,7 @@ public class DayDetail extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.day_dedtail);
+        setContentView(R.layout.day_detail);
     System.out.println("여기 들어오시나요?");
         dayArrayList = new ArrayList<>();
         dayArrayList.add(new Day("발렌타인데이","D-18", "2021.07.09 (금)"));

@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#FFA24343</color>
     <color name="barWhite">#E6000000</color>
-    <color name="gray">#FFC1C1C1</color>
+    <color name="gray">#DFDEDE</color>
     <color name="pointColor">#FFF26E50</color>
 </resources>

@@ -13,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.alroha.MainActivity;
 import com.example.alroha.R;
+import com.example.alroha.wish.AddWish;
 
 import java.util.ArrayList;
 
@@ -44,6 +46,8 @@ public class Fragment3  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getContext(),i+"번째 Item",Toast.LENGTH_SHORT).show();
+                ((MainActivity) getActivity()).replaceFragment(DiaryDetail.newInstance());
+
             }
         });
 
