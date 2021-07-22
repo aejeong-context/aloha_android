@@ -5,24 +5,26 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp">
+    >
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <androidx.cardview.widget.CardView
         android:layout_width="380dp"
         android:layout_height="100dp"
-        android:background="@color/white"
-        app:cardCornerRadius="5dp">
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
-        <CheckBox
+        <RadioButton
             android:id="@+id/checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="26dp"
+            android:buttonTint="@color/pointColor"
             android:textSize="10dp" />
 
         </LinearLayout>
@@ -32,6 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/fontColor"
             android:text="한강에서 치킨 시켜먹기"
             android:textSize="30dp" />
     </androidx.cardview.widget.CardView>

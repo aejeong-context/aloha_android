@@ -8,10 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.alroha.R;
+import com.example.alroha.onBackPressListener;
+import com.example.alroha.wish.Fragment2;
 
-public class DiaryDetail extends Fragment {
+public class DiaryDetail extends Fragment implements onBackPressListener {
 
     ViewGroup viewGroup;
 
@@ -26,5 +29,13 @@ public class DiaryDetail extends Fragment {
         return viewGroup;
     }
 
+    @Override
+    public void onBackKey() {
+        goToBack();
+    }
 
+    private void goToBack() {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.main_layout, Fragment3.newInstance()).commit();
+    }
 }

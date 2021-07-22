@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/gray">
 
     <TextView
         android:layout_width="200dp"
@@ -15,17 +17,20 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:text="다이어리"
-        android:textColor="@android:color/white"
+        android:textColor="@color/pointColor"
         android:textSize="40dp"
         android:textStyle="bold" />
-    <ImageButton
+    <TextView
         android:id="@+id/diary_add"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"
         android:layout_marginLeft="120dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/ic_baseline_add_24"/>
+        android:text="작성하기"
+        android:textColor="@color/pointColor"/>
+<!--        android:background="@android:color/transparent"-->
+<!--        app:srcCompat="@drawable/ic_baseline_add_24"-->
+
 </LinearLayout>
     <ListView
         android:id="@+id/textView"

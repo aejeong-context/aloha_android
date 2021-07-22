@@ -17,14 +17,15 @@
             android:layout_width="380dp"
             android:layout_height="50dp"
             app:cardBackgroundColor="@color/white"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            app:cardElevation="0dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="2020 8월 29일"
                 android:gravity="left|center"
                 android:layout_marginLeft="20dp"
-                android:textColor="@color/black"
+                android:textColor="@color/fontColor"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -57,6 +58,7 @@
                     android:layout_width="380dp"
                     android:layout_height="100dp"
                     app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
                     >
                     <TextView
                         android:id="@+id/diaryId"
@@ -64,7 +66,7 @@
                         android:layout_height="match_parent"
                         android:text="1"
                         android:layout_marginLeft="20dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/fontColor"
                         android:textSize="20dp"
                         android:gravity="left|center"/>
                     <TextView
@@ -73,18 +75,19 @@
                         android:layout_height="match_parent"
                         android:textColor="@color/pointColor"
                         android:textSize="20dp"
-                        android:gravity="center|right"
+                        android:gravity="top|right"
+                        android:layout_marginTop="20dp"
                         android:text="#여성문화회관"
                         android:layout_marginRight="20dp"/>
                     <TextView
                         android:id="@+id/diaryComment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="10dp"
-                        android:text="장소 1코멘트"
+                        android:text="'종이접기 교육을 받았다'"
                         android:textSize="20dp"
-                        android:layout_marginRight="20dp"
-                        android:textColor="@color/black"
+                        android:layout_margin="20dp"
+
+                        android:textColor="@color/fontColor"
                         android:gravity="bottom|right"/>
 
                 </androidx.cardview.widget.CardView>
@@ -95,21 +98,22 @@
                 android:layout_height="80dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_marginTop="20dp"
+                app:cardElevation="0dp"
                 >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:text="철수"
                 android:gravity="left|center"
-                android:textColor="@color/black"
+                android:textColor="@color/fontColor"
                 android:textSize="20dp"
                 android:layout_marginLeft="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="웃음"
-                    android:gravity="center|right"
+                    android:layout_marginTop="15dp"
+                    android:gravity="top|right"
                     android:textSize="20dp"
                     android:layout_marginRight="20dp"
                     android:textColor="@color/pointColor"/>
@@ -117,9 +121,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="20dp"
-                    android:text="남자 왈"
+                    android:text="'완벽한 하루였다 ^^!'"
+                    android:layout_margin="10dp"
                     android:layout_marginRight="20dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/fontColor"
                     android:gravity="bottom|right"/>
 
             </androidx.cardview.widget.CardView>
@@ -128,21 +133,22 @@
                 android:layout_height="80dp"
                 app:cardBackgroundColor="@color/white"
                 android:layout_marginTop="10dp"
+                app:cardElevation="0dp"
                 >
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:text="짱구"
                     android:gravity="left|center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/fontColor"
                     android:textSize="20dp"
                     android:layout_marginLeft="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="빡침"
-                    android:gravity="center|right"
+                    android:layout_marginTop="15dp"
+                    android:gravity="top|right"
                     android:textSize="20dp"
                     android:layout_marginRight="20dp"
                     android:textColor="@color/pointColor"/>
@@ -150,9 +156,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="20dp"
-                    android:text="여자 왈"
+                    android:text="'난 오늘 조금 서운해'"
+                    android:layout_margin="10dp"
                     android:layout_marginRight="20dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/fontColor"
                     android:gravity="bottom|right"/>
 
             </androidx.cardview.widget.CardView>
@@ -164,7 +171,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom|center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
 
         <Button
             android:layout_width="180dp"
@@ -175,7 +183,8 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="삭제하기"
             android:textAlignment="center"
-            android:textColor="@color/pointColor" />
+            android:textColor="@color/pointColor"
+            style="?android:attr/borderlessButtonStyle"/>
 
         <Button
             android:layout_width="180dp"
@@ -185,7 +194,8 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="편집하기"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
 
     </LinearLayout>
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,12 +22,16 @@ import java.util.ArrayList;
 
 public class Fragment3  extends Fragment {
 
+    public static Fragment3 newInstance(){
+        return new Fragment3();
+    }
+
     ViewGroup viewGroup;
 
     ArrayList<Diary> diaryArrayList;
     DiaryList diaryAdapter;
     ListView listView;
-    ImageButton diaryAdd;
+    TextView diaryAdd;
 
     @Nullable
     @Override
@@ -45,7 +50,6 @@ public class Fragment3  extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getContext(),i+"번째 Item",Toast.LENGTH_SHORT).show();
                 ((MainActivity) getActivity()).replaceFragment(DiaryDetail.newInstance());
 
             }

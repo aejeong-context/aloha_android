@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -68,7 +69,7 @@ public class   Fragment2 extends Fragment {
 
 
 
-        ImageButton addWish = (ImageButton) viewGroup.findViewById(R.id.wishAdd);
+        TextView addWish = (TextView) viewGroup.findViewById(R.id.wishAdd);
         addWish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

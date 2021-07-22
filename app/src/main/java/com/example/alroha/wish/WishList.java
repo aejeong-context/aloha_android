@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.example.alroha.R;
@@ -47,11 +48,11 @@ public class WishList extends BaseAdapter {
 
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.wish_list, viewGroup, false);
             TextView content = (TextView) view.findViewById(R.id.wishText);
-            CheckBox checked = (CheckBox) view.findViewById(R.id.checked);
+            RadioButton checked = (RadioButton) view.findViewById(R.id.checked);
 
 
             holder.content =content;
-            holder.checked =checked;
+            holder.checked = checked;
         }else{
             holder = (ViewHolder) view.getTag();
         }
@@ -69,6 +70,6 @@ public class WishList extends BaseAdapter {
 
     static class ViewHolder{
         TextView content;
-        CheckBox checked;
+        RadioButton checked;
     }
 }

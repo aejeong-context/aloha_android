@@ -111,8 +111,8 @@
         android:layout_height="100dp"
         android:layout_marginTop="600dp"
         android:layout_marginLeft="16dp"
-        app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="#D9000000"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#66595959"
 
         >
         <TextView

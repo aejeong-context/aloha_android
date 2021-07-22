@@ -23,7 +23,8 @@
                 android:layout_width="370dp"
                 android:layout_height="200dp"
                 app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="0dp">
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
 
                 <TextView
                     android:id="@+id/contents"
@@ -40,12 +41,13 @@
                 android:layout_width="370dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="25dp"
                     android:text="위시한 날짜"
                     android:textColor="@color/black"
@@ -74,7 +76,7 @@
                     android:id="@+id/cardView"
                     android:layout_width="370dp"
                     android:layout_height="match_parent"
-
+                    app:cardElevation="0dp"
                     app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
@@ -90,12 +92,13 @@
                 android:layout_width="370dp"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white">
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="25dp"
                     android:text="위시한 사람"
                     android:textColor="@color/black"
@@ -128,6 +131,7 @@
                 android:background="@color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="삭제하기"
+                style="?android:attr/borderlessButtonStyle"
                 android:textAlignment="center"
                 android:textColor="@color/black" />
 
@@ -138,8 +142,9 @@
                 android:background="@color/white"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="달성하기"
+                style="?android:attr/borderlessButtonStyle"
                 android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textColor="@color/pointColor" />
 
         </LinearLayout>
     </FrameLayout>

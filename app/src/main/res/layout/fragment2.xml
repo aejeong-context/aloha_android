@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -16,17 +17,20 @@
         android:text="위시리스트"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/pointColor"
         android:textSize="40sp"
         android:textStyle="bold" />
-    <ImageButton
+    <TextView
         android:id="@+id/wishAdd"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"
         android:layout_marginLeft="120dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/ic_baseline_add_24"/>
+        android:textColor="@color/pointColor"
+        android:text="위시하기"/>
+<!--        android:background="@android:color/transparent"-->
+<!--        app:srcCompat="@drawable/ic_baseline_add_24"-->
+
 </LinearLayout>
 
 <com.google.android.material.tabs.TabLayout
@@ -35,7 +39,8 @@
     android:layout_height="wrap_content"
     app:tabMode="fixed"
     app:tabSelectedTextColor="@color/pointColor"
-    app:tabIndicatorColor="@color/pointColor">
+    app:tabIndicatorColor="@color/pointColor"
+    app:tabTextColor="@color/black">
     <com.google.android.material.tabs.TabItem
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +53,7 @@
 </com.google.android.material.tabs.TabLayout>
 
     <ListView
+        android:layout_marginTop="10dp"
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
