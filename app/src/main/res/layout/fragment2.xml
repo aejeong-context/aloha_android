@@ -18,7 +18,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/pointColor"
-        android:textSize="40sp"
+        android:textSize="40dp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/wishAdd"

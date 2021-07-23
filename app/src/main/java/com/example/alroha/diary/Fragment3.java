@@ -60,7 +60,7 @@ public class Fragment3  extends Fragment {
         diaryAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ((MainActivity) getActivity()).replaceFragment(AddDiary.newInstance());
             }
         });
 

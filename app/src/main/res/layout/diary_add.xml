@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,12 +12,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/pointColor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:text="다이어리"
             android:textSize="40dp"/>
+
         <androidx.cardview.widget.CardView
             android:layout_width="380dp"
-            android:layout_height="100dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_height="60dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -31,20 +38,116 @@
                 android:gravity="right|center"
                 android:layout_marginRight="20dp">
 
-           <com.google.android.material.button.MaterialButton
-               android:layout_width="100dp"
+           <Button
+               android:layout_width="110dp"
                android:layout_height="40dp"
                android:gravity="center"
                android:text="Jul 14, 2021"
-               android:textColor="@color/black"
-               android:background="@color/gray"
-               app:cornerRadius="50dp"
+               android:textColor="@color/fontColor"
+               android:background="@drawable/diary_round_button"
+               style="?android:attr/borderlessButtonStyle"
                />
+
             </LinearLayout>
 
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:id="@+id/diary_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="380dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="0dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="1번째 장소이름"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#DDDDDD"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="한줄평"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#DDDDDD"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#59F26E50"
+            app:cardElevation="0dp">
+            <ImageButton
+                android:id="@+id/addPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_add_point"
+                style="?android:attr/borderlessButtonStyle"
+                android:backgroundTint="@color/pointColor"
+                android:layout_gravity="center"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="0dp"
+
+            >
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="철수님의 오늘의 한마디"
+                android:textColorHint="#DDDDDD"
+                android:textColor="@color/black"/>
 
         </androidx.cardview.widget.CardView>
-    </LinearLayout>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="0dp">
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="영희님의 오늘의 한마디"
+                android:gravity="left|center"
+                android:textColorHint="#DDDDDD"
+                android:textColor="@color/black"/>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/addDiary"
+            android:layout_width="380dp"
+            android:layout_height="65dp"
+            android:text="작성하기"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/pointColor"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
