@@ -31,7 +31,6 @@ public class   Fragment2 extends Fragment {
 
     ArrayList<Wish> apiResponse;
     ArrayList<Wish> wishArrayList;
-    ArrayList<Wish> endWishArrayList;
     WishList wishAdapter;
     ListView listView;
 
@@ -44,7 +43,6 @@ public class   Fragment2 extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         apiResponse = new ArrayList<>();
-        endWishArrayList = new ArrayList<>();
         wishArrayList = new ArrayList<>();
 
         apiResponse.add(new Wish("바다에서 맥주마시기", false, null));

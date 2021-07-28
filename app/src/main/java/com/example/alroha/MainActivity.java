@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.alroha.coupon.Fragment4;
 import com.example.alroha.diary.Fragment3;
 import com.example.alroha.wish.Fragment2;
 import com.example.alroha.wish.WishDetail;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
+    Fragment4 fragment4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
+        fragment4 = new Fragment4();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment1).commitNow();
 
@@ -57,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.tab3:{
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment3).commitNow();
+                        return true;
+                    }
+
+                    case R.id.tab4:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment4).commitNow();
                         return true;
                     }
 
