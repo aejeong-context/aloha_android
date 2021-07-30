@@ -27,12 +27,18 @@ android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="쿠폰 이름"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
             android:gravity="left"
             android:textColor="@color/pointColor"/>
         <TextView
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
             android:text="쿠폰 사용"
             android:gravity="right"
             android:textColor="@color/pointColor"/>
@@ -48,6 +54,8 @@ android:layout_marginLeft="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/fontColor"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="22dp"
                 android:gravity="left"
                 android:text="한대 맞기"/>
             <TextView
@@ -55,6 +63,8 @@ android:layout_marginLeft="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/fontColor"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="13dp"
                 android:gravity="right"
                 android:text="지수"/>
         </LinearLayout>
