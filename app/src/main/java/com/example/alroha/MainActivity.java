@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.alroha.coupon.Fragment4;
 import com.example.alroha.diary.Fragment3;
+import com.example.alroha.setting.Fragment5;
 import com.example.alroha.wish.Fragment2;
 import com.example.alroha.wish.WishDetail;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
+    Fragment5 fragment5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
+        fragment5 = new Fragment5();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment1).commitNow();
 
@@ -65,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.tab4:{
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment4).commitNow();
+                        return true;
+                    }
+
+                    case R.id.tab5:{
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_layout,fragment5).commitNow();
                         return true;
                     }
 
