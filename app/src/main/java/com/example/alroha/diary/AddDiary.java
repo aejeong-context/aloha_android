@@ -2,14 +2,12 @@ package com.example.alroha.diary;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,10 +16,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.alroha.R;
-import com.example.alroha.onBackPressListener;
-import com.example.alroha.wish.Fragment2;
+import com.example.alroha.OnBackPressListener;
 
-public class AddDiary extends Fragment implements onBackPressListener {
+public class AddDiary extends Fragment implements OnBackPressListener {
 
     ViewGroup viewGroup;
     ImageButton addPlace;

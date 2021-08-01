@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -17,7 +16,6 @@ import com.example.alroha.coupon.Fragment4;
 import com.example.alroha.diary.Fragment3;
 import com.example.alroha.setting.Fragment5;
 import com.example.alroha.wish.Fragment2;
-import com.example.alroha.wish.WishDetail;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -97,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         List<Fragment> fragmentList = getSupportFragmentManager().getFragments();
         for(Fragment fragment : fragmentList){
-            if(fragment instanceof onBackPressListener){
-                ((onBackPressListener)fragment).onBackKey();
+            if(fragment instanceof OnBackPressListener){
+                ((OnBackPressListener)fragment).onBackKey();
                 return;
             }
         }

@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.alroha.R;
-import com.example.alroha.onBackPressListener;
+import com.example.alroha.OnBackPressListener;
 
-public class AddWish extends Fragment implements onBackPressListener {
+public class AddWish extends Fragment implements OnBackPressListener {
 
     ViewGroup viewGroup;
 

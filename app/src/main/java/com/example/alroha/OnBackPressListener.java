@@ -1,5 +1,5 @@
 package com.example.alroha;
 
-public interface onBackPressListener{
+public interface OnBackPressListener {
     void onBackKey();
 }

@@ -1,4 +1,4 @@
-package com.example.alroha.diary;
+package com.example.alroha.setting;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,23 +11,26 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.alroha.R;
+import com.example.alroha.diary.Fragment3;
 import com.example.alroha.OnBackPressListener;
 
-public class DiaryDetail extends Fragment implements OnBackPressListener {
+public class LogOut extends Fragment implements OnBackPressListener {
 
     ViewGroup viewGroup;
 
-    public static DiaryDetail newInstance(){
-        return new DiaryDetail();
+    public static LogOut newInstance(){
+        return new LogOut();
     }
+
     @Nullable
     @Override
-    public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.diary_detail, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable  ViewGroup container, Bundle savedInstanceState) {
+
+         super.onCreateView(inflater, container, savedInstanceState);
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.logout, container, false);
 
         return viewGroup;
     }
-
     @Override
     public void onBackKey() {
         goToBack();
@@ -35,6 +38,7 @@ public class DiaryDetail extends Fragment implements OnBackPressListener {
 
     private void goToBack() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_layout, Fragment3.newInstance()).commit();
+        fragmentManager.beginTransaction().replace(R.id.main_layout, Fragment5.newInstance()).commit();
     }
+
 }
