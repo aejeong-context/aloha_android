@@ -4,10 +4,15 @@ public class HistoryCoupon {
     private String title;
     private String useMember;
 
+    public HistoryCoupon() {
+    }
+
     public HistoryCoupon(String title, String useMember) {
         this.title = title;
         this.useMember = useMember;
+
     }
+
 
     public String getTitle() {
         return title;

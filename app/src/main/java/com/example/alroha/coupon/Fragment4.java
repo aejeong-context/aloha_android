@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.alroha.MainActivity;
 import com.example.alroha.R;
+import com.example.alroha.setting.ReplaceNickname;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +70,14 @@ public class Fragment4 extends Fragment {
        ListUtils.setDynamicHeight(listView);
 
 
+       TextView allHistory = viewGroup.findViewById(R.id.allHistory);
+       allHistory.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               ((MainActivity) getActivity()).replaceFragment(HistoryAll.newInstance());
+
+           }
+       });
 
         return viewGroup;
     }
